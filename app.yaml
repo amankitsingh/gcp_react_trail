@@ -1,5 +1,14 @@
 runtime: nodejs
 env: flex
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: build/index.html
+  upload: build/index.html
+- url: /
+  static_dir: build
+
 manual_scaling:
   instances: 1
 resources:
